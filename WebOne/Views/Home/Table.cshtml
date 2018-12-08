@@ -1,0 +1,41 @@
+﻿@model WebOne.ContextDbs.PeopleContext
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Table</title>
+</head>
+<body>
+        <div class="container">
+  <h2>Basic Table</h2>
+  <p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p>            
+  <table class="table">
+      <tr>
+        <th>ID</th>
+        <th>FIRSTNAME</th>
+        <th>LASTNAME</th>
+      </tr>                  
+   @foreach (Person  PersonList in Model)
+   {
+      <tr>
+        <td>@PersonList.Id</td>
+      </tr>
+      <tr>
+        <td>@PersonList.FirstName</td>
+      </tr>
+      <tr>
+        <td>@PersonList.LastName</td>
+      </tr>
+      <tr>
+        <td>@PersonList.BirthDate</td>
+      </tr>
+  }
+  </table>
+</div
+</body>
+</html>
+
